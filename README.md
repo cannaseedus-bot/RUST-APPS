@@ -8,6 +8,7 @@ High-performance Rust CLI scaffolding for Nexus Studio AI, including optional we
 - 🤖 AI model stub for code generation flows
 - 🌐 Optional Warp-based web interface with REST and WebSocket endpoints
 - 📦 Config and template helpers for local development
+- 🖥️ PowerShell TUI and installer scripts for Windows users
 
 ## Getting Started
 
@@ -31,6 +32,18 @@ cargo run -- nexus --help
 cargo run --features web -- nexus web --port 8080
 ```
 
+## PowerShell TUI (Windows)
+
+The repository includes two PowerShell scripts for an interactive TUI and an installer.
+
+```powershell
+# Launch the TUI directly
+./nexus-tui.ps1
+
+# Run the installer
+./nexus-install.ps1
+```
+
 ## Project Structure
 
 ```text
@@ -45,6 +58,8 @@ src/
   web.rs        Warp web server and websocket handlers
 templates/
   index.html    Web landing page
+nexus-tui.ps1   PowerShell TUI
+nexus-install.ps1 PowerShell installer
 ```
 
 ## Notes
