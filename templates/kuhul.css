@@ -1,0 +1,16 @@
+/* This isn't CSS - it's SVG parameter mappings */
+token-shape {
+  stroke: url(#weight-gradient);
+  stroke-width: attr(weight number);
+  opacity: calc(sin(attr(phase number) * 2 * pi));
+}
+
+neuron-quantum {
+  fill: hsl(attr(activation number) * 360, 100%, 50%);
+  filter: blur(calc(1 - attr(confidence number)) * 5px);
+}
+
+superposition-path {
+  stroke: url(#probability-gradient);
+  stroke-dasharray: calc(attr(entanglement number) * 10);
+}

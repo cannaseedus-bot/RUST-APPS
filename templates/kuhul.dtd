@@ -1,0 +1,30 @@
+<!ELEMENT kuhul:system (kuhul:metadata, vocab:lattice, neural:engine,
+                       svg:schema, quantum:tensors, kuhul:pipeline,
+                       kuhul:interface, quantum:state-manager, kuhul:mask)>
+<!ATTLIST kuhul:system
+  xmlns:kuhul CDATA #FIXED "urn:kuhul:core:v1"
+  version CDATA #REQUIRED
+  id ID #REQUIRED>
+
+<!ELEMENT vocab:token (vocab:vector, vocab:svg, vocab:semantic)>
+<!ATTLIST vocab:token
+  id ID #REQUIRED
+  weight CDATA #REQUIRED>
+
+<!ELEMENT neural:node (neural:position, neural:connections,
+                      neural:svg-representation?)>
+<!ATTLIST neural:node
+  id ID #REQUIRED
+  superposition CDATA #IMPLIED>
+
+<!ELEMENT svg:component (svg:geometry, svg:animation?, svg:data-binding?)>
+<!ATTLIST svg:component
+  name CDATA #REQUIRED
+  type CDATA #REQUIRED
+  dimensions CDATA #REQUIRED>
+
+<!ELEMENT quantum:tensor (quantum:data, quantum:metadata)>
+<!ATTLIST quantum:tensor
+  id ID #REQUIRED
+  format (binary|svg-path|matrix) #REQUIRED
+  compression (scx|lz77|quantum) "scx">
